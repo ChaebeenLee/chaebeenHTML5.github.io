@@ -1,0 +1,27 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
+    color: #333;
+    /* position: relative !important; */
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+h2 {
+    position: absolute; left: -9999px; font-size: 0; width: 0; height: 0; overflow: hidden;
+}
+img {
+    vertical-align: top;
+}
+.wrap {width: 1400px; margin: 0 auto; position: relative;}

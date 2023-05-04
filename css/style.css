@@ -1,0 +1,380 @@
+/* header */
+.globalNavigation{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background-color:rgba(255,255,255,0);
+    transition: 0.4s;
+}
+.globalNavigation.active{
+    background-color:rgba(255,255,255,0.8);
+}
+.globalNavigation.active a{
+    color: #999;
+}
+.globalNavigation:hover{
+    background-color:rgba(255,255,255,1);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+.globalNavigation:hover ul li a{
+    color: #999;
+}
+.globalNavigation nav, .container{
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 840px;
+}
+.globalNavigation nav ul{
+    display: flex;
+    justify-content:space-between;
+}
+.globalNavigation nav ul li{
+    padding: 24px 0;
+}
+.globalNavigation nav ul li a{
+    color:#FBF665;
+    transition: 0.4s;
+    font-size: 2.4em;
+}
+.globalNavigation nav ul li a:hover{
+    color: #668B8A;
+}
+
+/* main */
+main{
+    margin: 0 auto;
+}
+#mainBackgroundCanvas{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+main figure{
+    width: 100%;
+    margin-top: 130px;
+}
+main figure::before{
+    content:"";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 80px;
+    right: 76px;
+    width: calc(100% - 80px);
+    height: 800px;
+    border-top: 2px solid #FBF665;
+    border-right: 2px solid #FBF665;;
+}
+main figure img{
+    width: 600px;
+    height: 600px;
+    background: #ccc;
+    object-fit: cover;
+}
+main figcaption{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -100px;
+    background: #fff;
+    border-radius: 200px 0 0 200px;
+    padding:  48px 48px 48px 96px;
+    box-sizing: border-box;
+    color: #668B8A;
+    line-height: 1.4;
+}
+main figcaption h3{
+    font-size: 8.0em;
+    font-family: 'Abril Fatface';
+}
+main figcaption h3 strong{
+	background: url("../images/home_waterImage.png") no-repeat;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: backgroundImageAnimation 4s infinite alternate ease-in-out;
+}
+@keyframes backgroundImageAnimation{
+	0% {	background-position: 0% }
+	100% {	background-position: 100%; }
+}
+main figcaption p{
+    font-size: 1.6em;
+    text-align: right;
+    color: #999;
+}
+main>img{
+    position: absolute;
+    z-index: 1;
+}
+main>img:first-of-type{
+    bottom: 0;
+    left: 0;
+}
+main>img:last-of-type{
+    transform: rotateY(180deg);
+    top: -120px;
+    right: 0;
+}
+
+/* #homeCont */
+#homeCont{
+    background: #eee;
+    height: 600px;
+    padding-top: 240px;
+}
+#homeCont dl{
+    transform:translate(0, 40%);
+}
+#homeCont dl dt{
+    font-size: 8.0em;
+    margin-bottom: 48px;
+}
+#homeCont dl dd{
+    font-size: 1.8em;
+    line-height: 1.8;
+}
+#homeCont dl dd small{
+    display: block;
+    color: #999;
+    font-weight: 100;
+}
+#homeCont .waterImageBackground{
+    width: 400px;
+    height: 400px;
+    background-color: #668B8A;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#homeCont .waterImageBackground::after{
+    content: "";
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #FBF665;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#homeCont .waterImageBackground img{
+    width: 400px;
+    height: 400px;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+/* #profileCont */
+#profileCont1{
+    overflow: hidden;
+}
+#profileCont1 .videoContainer{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+#profileCont1 video{
+    margin-top: -120px;
+}
+#profileCont1 .ment{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 240px;
+    text-align: center;
+    margin-top: -100px;
+    line-height: 1.6;
+    color: #fff;
+}
+#profileCont1 h4{
+    font-size: 8.0em;
+}
+#profileCont1 p{
+    font-size: 1.4em;
+    margin-top: 300px;
+    opacity: 0.8;
+}
+#profileCont2{
+    background: #eee;
+    padding: 100px 0;
+    position: relative;
+}
+#profileCont2 h4{
+    font-size: 8.0em;
+    margin-bottom: 100px;
+}
+
+#profileCont2 .skillProgress{
+    width: 60%;
+    position: relative;
+}
+#profileCont2 .skillProgress li{
+    margin-bottom: 100px;
+}
+#profileCont2 .skillProgress label{
+    font-size: 1.8em;
+    margin-bottom: 24px;
+    display: block;
+}
+.skillProgress meter{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 8px;
+}
+.skillProgress meter::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    border-radius: 8px;
+    vertical-align: top;
+    background-color: #668B8A;
+}
+.skillProgress li:nth-child(1) meter::after{
+    width : 60%;
+}
+.skillProgress li:nth-child(2) meter::after{
+    width : 30%;
+}
+.skillProgress li:nth-child(3) meter::after{
+    width : 80%;
+}
+meter::-webkit-meter-bar{
+    background: none;
+    background-color: #ccc;
+    background-size: 100% 100%;
+}
+meter::-webkit-meter-value{
+    width: 500px;
+    height: 8px;
+    background: none;
+    background-color: #668B8A;
+    background-size: 100% 100%;
+}
+
+.skillProgress small{
+    color: #999;
+    font-size: 1.4em;
+    position: absolute;
+    margin-left: 24px;
+}
+#profileCont2 img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(180deg);
+}
+
+/* contact */
+#contactForm{
+    padding-top: 200px;
+    background-color: #333;
+}
+#contactForm form input, textarea{
+    outline:0;
+    color:white;
+    font-family: "Noto Sans KR";
+    font-size: 1.6em;
+    line-height: 1.4;
+    background-color: transparent;
+    border:1px solid rgba(251, 246, 101,0.6);
+    border-radius: 8px;
+    width:100%;
+    padding: 12px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    transition: all 0.4s;
+}
+textarea{
+    height: 140px;
+    resize: vertical;
+}
+#contactForm form input:hover, textarea:hover{
+    background-color: rgba(251, 246, 101,0.1);
+}
+#contactForm form input:focus, textarea:focus{
+    border:1px solid rgba(251, 246, 101,1);
+}
+button[type="submit"] {
+    width: 100%;
+    background-color: rgba(251, 246, 101,0.4);
+    border-radius: 8px;
+    cursor:pointer;
+    color:#333;
+    font-size:2em;
+    font-weight: bold;
+    padding: 16px 0;
+    transition: all 0.4s;
+    border: none;
+}
+button[type="submit"]:hover{
+    background-color: rgba(251, 246, 101,1);
+}
+#contactCont{
+    padding: 100px 0;
+    background-color: #333;
+    box-sizing: border-box;
+}
+#contactCont .btn_contact{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
+#contactCont .btn_contact li{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    transition: border-top-color 0.2s linear 0s, border-right-color 0.2s linear 0.1s, border-bottom-color 0.2s linear 0.2s, border-left-color 0.2s linear 0.3s;
+    overflow: visible;
+}
+#contactCont .btn_contact li:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#contactCont .btn_contact li:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+}
+#contactCont .btn_contact li:hover{
+    border-color: rgba(0, 0, 0, 0);
+}
+#contactCont .btn_contact li a{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* footer */
+footer{
+    padding: 48px 0;
+    background: #333;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.4em;
+    font-weight: 100;
+    text-align: center;
+    line-height: 2;
+}
