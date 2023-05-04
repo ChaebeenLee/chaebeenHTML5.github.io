@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leechaebeen_202334-364090</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--font-->
+    <!--font-family: "Noto Sans KR", sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!--font-family: 'Abril Fatface', cursive;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <header class="globalNavigation">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" rel="HOME">
+                        <h1>HOME</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html" rel="ABOUT ME">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="contact.html" rel="menu-3">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!--canvas-->
+        <canvas id="mainBackgroundCanvas" width="1920" height="900" ></canvas>
+        <script>
+            const mainBackgroundCanvas = document.getElementById('mainBackgroundCanvas');
+            const box1 = mainBackgroundCanvas.getContext("2d");
+            const box2 = mainBackgroundCanvas.getContext("2d");
+            box1.fillStyle = '#668B8A';
+            box1.fillRect(0, 0, 1920, 350);
+            box2.fillStyle = '#eee';
+            box2.fillRect(0, 300, 1920, 550);
+        </script>
+
+        <div class="container">
+            <figure>
+                <img src="images/home_me.jpg" alt="">
+                <figcaption>
+                    <h3>Hello<br>I'm <strong>LEE CHAE BEEN</strong></h3>
+                    <p>&#91;202334-364090&#93; Department of Computer Science, Korea National Open University&#40;KNOU&#41;</p>
+                </figcaption>
+            </figure>
+        </div>
+        <img class="backgroundGrassleft" src="images/home_backgroundGrass.png" alt="배경 풀 이미지">
+        <img class="backgroundGrassRight" src="images/home_backgroundGrass.png" alt="배경 풀 이미지">
+    </main>
+
+    <!-- #homeCont -->
+    <section id="homeCont">
+        <h2>홈 콘텐츠 영역</h2>
+        <div class="container">
+            <dl>
+                <dt>Overview</dt>
+                <dd>안녕하세요. 한국방송통신대학교 컴퓨터과학과 이채빈입니다.
+                    <br>HTML5 웹 프로그래밍 과제로 개인 소개용 웹 사이트를 만들었습니다.
+                    <small>제작기간 : 2023.05.03 - 2023.05.05</small>
+                </dd>
+            </dl>
+            <div class="waterImageBackground">
+                <img src="images/home_waterImage.png" alt="물 이미지">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <h2>footer 영역</h2>
+        <div class="container">
+            <p>LEE CHAE BEEN personal website</p>
+            <small>Copyright 2023 © leechaebeen Corp. All Right Reserved.</small>
+        </div>
+    </footer>
+
+    <script src="js/style.js"></script>
+</body>
+</html>

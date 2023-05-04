@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--font-->
+    <!--font-family: "Noto Sans KR", sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!--font-family: 'Abril Fatface', cursive;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- header -->
+    <header class="globalNavigation">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" rel="HOME">
+                        <h1>HOME</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html" rel="ABOUT ME">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="contact.html" rel="CONTACT">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <!-- form -->
+    <article id="contactForm">
+        <div class="container">
+            <form>      
+                <input name="name" type="text" placeholder="Name" />   
+                <input name="email" type="text" placeholder="Email" />
+                <textarea name="text" placeholder="Comment"></textarea>
+                <button type="submit" value="SUBMIT">SUBMIT</button>>
+            </form>
+        </div>
+    </article>
+
+
+
+
+
+
+
+    <!-- #contactCont -->
+    <section id="contactCont">
+        <h2>contact 콘텐츠 영역</h2>
+        <div class="container">
+            <ul class="btn_contact">
+                <li><a href="sms:010-5362-2135" target="_blank" title="휴대폰으로 연결"><img src="images/contact_ic_phone.png" alt="휴대폰으로 연결"></a></li>
+                <li><a href="https://open.kakao.com/o/s6zXUGLc" target="_blank"><img src="images/contact_ic_kakao.png" alt="카카오톡 오픈 채팅방으로 연결"></a></li>
+                <li><a href='javascript:void(0)' onclick='preventClick(event)'><img src="images/contact_ic_blog.png" alt="블로그로 연결"></a></li>
+                <li><a href='javascript:void(0)' onclick='preventClick(event)'><img src="images/contact_ic_insta.png" alt="인스타그램으로 연결"></a></li>
+                <li><a href='javascript:void(0)' onclick='preventClick(event)'><img src="images/contact_ic_youtube.png" alt="유투브로 연결"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <h2>footer 영역</h2>
+        <div class="container">
+            <p>LEE CHAE BEEN personal website</p>
+            <small>Copyright 2023 © leechaebeen Corp. All Right Reserved.</small>
+        </div>
+    </footer>
+
+    <script src="js/style.js"></script>
+</body>
+</html>
